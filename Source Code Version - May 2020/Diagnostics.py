@@ -1,5 +1,5 @@
 from ortools.sat.python import cp_model
-import Scheduler
+import diagScheduler
 import Convert_Date
 import xlwt
 import Read_File
@@ -7,7 +7,7 @@ import Read_File
 def diagnostics(currentSettings, res_List, opSettings, path):
 
     print("Running some basic statistics on output")
-    diagnosticResults = Scheduler.scheduler(currentSettings, res_List, opSettings, 30, path, True)
+    diagnosticResults = diagScheduler.scheduler(currentSettings, res_List, opSettings, 30, path, True)
     status = diagnosticResults[0]
     res_available = diagnosticResults[1]
     num_available = diagnosticResults[2]
